@@ -1,0 +1,172 @@
+AllCops:
+  DisabledByDefault: false
+  NewCops: disable
+  Exclude:
+    - "db/**/*"
+    - "config/**/*"
+    - "bin/*"
+    - "public/**/*"
+    - "app/vue/**/*"
+    - "spec/fixtures/*"
+    - "playground/**/*"
+
+Layout/LineLength:
+  Enabled: true
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented_relative_to_receiver
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  EnforcedStyle: compact
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+  EnforcedStyle: compact
+
+Layout/SpaceInsideArrayPercentLiteral:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Lint/SuppressedException:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Metrics/BlockLength:
+  Enabled: false
+  Max: 25
+
+Metrics/ClassLength:
+  Enabled: false
+  Max: 100
+
+Metrics/MethodLength:
+  Enabled: false
+  Max: 10
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 17
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 7
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 8
+
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+Naming/PredicateName:
+  Enabled: false
+  Exclude:
+    - "spec/**/*"
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: true
+  PreferredName: "error"
+
+Naming/AccessorMethodName:
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+  Exclude:
+    - "spec/**/*"
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/MixinGrouping:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/OptionalArguments:
+  Enabled: true
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: true
+  EnforcedStyle: expanded
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    default: "()"
+    "%i": "()"
+    "%w": "()"
+
+Style/PreferredHashMethods:
+  Enabled: true
+  EnforcedStyle: verbose
+
+Style/NumericPredicate:
+  Enabled: true
+  EnforcedStyle: comparison
+
+Style/ClassCheck:
+  Enabled: true
+  EnforcedStyle: is_a?
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
