@@ -29,8 +29,8 @@ const Home = () => {
 
       <section className="p-8 grid md:grid-cols-2 gap-4">
         <div className="max-w-2xl">
-          <h3 className="text-5xl mb-4 font-garamond">Hello there,</h3>
-          <p className="mb-4">
+          <h3 className="text-5xl mb-8 font-garamond">Hello there,</h3>
+          <p className="mb-8">
             My name is Milad, with extensive experience across frontend, backend
             and infrastructure stacks, working across some of New Zealand top
             startup companies and some big names like Xero, I can help your

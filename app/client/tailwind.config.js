@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         garamond: ['"EB Garamond"', 'serif'],
       },
+      borderWidth: {
+        '1': '1px',
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
