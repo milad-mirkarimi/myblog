@@ -67,6 +67,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     ast (2.4.2)
+    base64 (0.2.0)
+    bcrypt (3.1.20)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -90,6 +92,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.7.2)
+    jwt (2.8.1)
+      base64
     language_server-protocol (3.17.0.3)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -215,9 +219,11 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  bcrypt
   bootsnap
   debug
   jbuilder (~> 2.5)
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

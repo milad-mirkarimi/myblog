@@ -27,3 +27,12 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+.env*
+!.env.sample
+/cert
+db/schema.rb
+db/structure.sql
+config/database.yml
+docker-compose.yml
+/public
