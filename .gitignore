@@ -31,7 +31,6 @@
 .env*
 !.env.sample
 /cert
-db/schema.rb
 db/structure.sql
 config/database.yml
 docker-compose.yml

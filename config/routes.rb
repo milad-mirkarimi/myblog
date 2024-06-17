@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  scope 'api' do
+    namespace 'v1' do
+      post 'login' => 'auth#create'
+    end
+  end
 end

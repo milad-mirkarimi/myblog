@@ -16,8 +16,8 @@ gem "jbuilder", "~> 2.5"
 
 gem "rack-cors", :require => "rack/cors"
 
-gem 'bcrypt'
-gem 'jwt'
+gem "bcrypt"
+gem "jwt"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
