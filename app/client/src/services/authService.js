@@ -5,7 +5,7 @@ const login = (email, password) => {
 };
 
 const logout = () => {
-  sessionStorage.removeItem("user");
+  sessionStorage.removeItem("token");
   delete http.defaults.headers.common["Authorization"];
 };
 

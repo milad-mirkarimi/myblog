@@ -6,9 +6,11 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await AuthService.login(email, password);
       if (response.data.token) {
@@ -22,33 +24,43 @@ const Login = () => {
       }
     } catch (error) {
       setMessage("Invalid email or password");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label htmlFor="email">Email</label>
+    <div className="container p-8 mx-auto max-w-2xl h-screen">
+      <h2 className="font-garamond text-4xl md:text-5xl lg:text-8xl">Login</h2>
+
+      <form onSubmit={handleLogin} className="mt-8">
+        <label htmlFor="email">
+          Email
           <input
-            name="email"
-            type="email"
-            value={email}
+            required
             onChange={(e) => setEmail(e.target.value)}
-            required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="enter your email"
+            className="search-input w-full rounded"
           />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
+        </label>
+
+        <label htmlFor="password">
+          Password
           <input
-            name="password"
-            type="password"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            type="password"
+            id="password"
+            name="password"
+            placeholder="enter your password"
+            className="search-input w-full rounded"
           />
-        </div>
-        <button type="submit">Login</button>
+        </label>
+        <button className="w-full rounded px-6 py-2 color text-white hover:opacity-90 border-none bg-gray-800">
+          {loading ? "Loading..." : "Submit"}
+        </button>
       </form>
       {message && <p>{message}</p>}
     </div>

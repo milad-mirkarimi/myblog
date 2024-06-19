@@ -10,6 +10,12 @@ body {
   font-style: normal;
 }
 
+@layer components {
+  .search-input {
+    @apply mb-4 block;
+  }
+}
+
 @layer utilities {
   .link {
     @apply text-gray-600 text-base italic underline hover:text-yellow-700;
