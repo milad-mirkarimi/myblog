@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import AuthService from "../services/authService";
 import http from "../services/index";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,8 +20,8 @@ const Login = () => {
         sessionStorage.setItem("token", JSON.stringify(response.data));
         http.defaults.headers.common[
           "Authorization"
-        ] = `Bearer ${JSON.stringify(response.data.token)}`;
-        window.location.href = "/create-article";
+        ] = `Bearer ${response.data.token}`;
+        navigate("/create-article");
       } else {
         setMessage("Invalid email or password");
       }
