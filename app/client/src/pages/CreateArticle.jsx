@@ -42,7 +42,7 @@ const CreateArticle = () => {
   };
 
   return (
-    <div className="container p-8 mx-auto max-w-2xl h-screen h-full">
+    <div className="container p-8 mx-auto max-w-2xl h-full">
       <h2 className="font-garamond text-4xl md:text-5xl lg:text-8xl">
         Create Article
       </h2>

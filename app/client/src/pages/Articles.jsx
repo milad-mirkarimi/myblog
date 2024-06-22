@@ -1,31 +1,30 @@
 import ArticleCard from "../components/ArticleCard";
+import { useEffect, useState } from "react";
+import ArticleService from "../services/articleService"
 
 const Articles = () => {
-  const articles = [
-    {
-      id: 1,
-      title: "How to not do Agile properly",
-      blob: 'Working across different businesses that they all claim to be "AGILE", I\'m going to share why they are not...',
-    },
-    {
-      id: 2,
-      title: "React Redux query 101",
-      blob: "Learn the magic of React Toolkit Query and how to make testable and maintainable code with React Redux tool...",
-    },
-    {
-      id: 3,
-      title: "How to structure your Vue app from scratch",
-      blob: "Structuring a Front end app from scratch could be very a duanting task, making lots of decision get go...",
-    },
-  ];
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    getArticles()
+  }, [])
+
+  async function getArticles() {
+    try{
+      const res = await ArticleService.fetchArticles()
+      setArticles(res.data)
+    } catch(error) {
+      console.log(error)
+    }
+  }
 
   return (
-    <div className="container p-8 mx-auto max-w-2xl">
+    <div className="container p-8 mx-auto max-w-2xl h-screen">
       <h2 className="font-garamond text-4xl md:text-5xl lg:text-8xl">
         Articles
       </h2>
       {!articles.length ? (
-        <h3>No articles Found 😢</h3>
+        <h3>Loading...</h3>
       ) : (
         articles.map((article) => {
           return (
@@ -33,7 +32,7 @@ const Articles = () => {
               key={article.id}
               title={article.title}
               id={article.id}
-              blob={article.blob}
+              blob={article.description}
             />
           );
         })
