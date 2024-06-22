@@ -10,5 +10,5 @@ const fetchArticles = () => {
 
 export default {
   create,
-  fetchArticles
+  fetchArticles,
 };
