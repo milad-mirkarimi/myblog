@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Articles from "./pages/Articles";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
-import Test from "./pages/Test";
+import CreateArticle from "./pages/CreateArticle";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/login" element={<Login />} />
           <Route
-            path="/test"
+            path="/create-article"
             element={
               <ProtectedRoute>
-                <Test />
+                <CreateArticle />
               </ProtectedRoute>
             }
           />

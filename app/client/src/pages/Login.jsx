@@ -18,7 +18,7 @@ const Login = () => {
         http.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${JSON.stringify(response.data.token)}`;
-        window.location.href = "/test";
+        window.location.href = "/create-article";
       } else {
         setMessage("Invalid email or password");
       }
