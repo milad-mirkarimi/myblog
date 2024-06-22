@@ -3,10 +3,10 @@
 🚀 Welcome to the My Blog! This is an open-source project built using Rails for the backend and React for the frontend.
 
 ## important 🚨
-Feel free to clone this project or fork it and use it for your own blog creation website.
+Feel free to clone this project or fork it to build your own blog creation website.
 
-☕️ If you are kind to buy me a coffee, maybe visit this link: https://buymeacoffee.com/milad.mirkarimi
-
+☕️ If you are kind enough to buy me a coffee, maybe visit this link: https://buymeacoffee.com/milad.mirkarimi
+![bmc_qr](https://github.com/milad-mirkarimi/myblog/assets/34124948/7365ed48-ebf4-4191-bd4f-da391fe8c496)
 ## Features ❤️
 User Authentication (Sign up, Login, Logout)
 Content Management System
