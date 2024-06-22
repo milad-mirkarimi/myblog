@@ -1,6 +1,4 @@
 class V1::AuthController < ApplicationController
-  before_action :authorize_request, except: :login
-
   def create
     @user = User.find_by(email: login_params[:email])
     if @user&.authenticate(login_params[:password])
