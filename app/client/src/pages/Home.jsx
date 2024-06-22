@@ -1,23 +1,8 @@
 import ArticleCard from "../components/ArticleCard";
+import useArticles from "../services/useArticles";
 
 const Home = () => {
-  const articles = [
-    {
-      id: 1,
-      title: "How to not do Agile properly",
-      blob: 'Working across different businesses that they all claim to be "AGILE", I\'m going to share why they are not...',
-    },
-    {
-      id: 2,
-      title: "React Redux query 101",
-      blob: "Learn the magic of React Toolkit Query and how to make testable and maintainable code with React Redux tool...",
-    },
-    {
-      id: 3,
-      title: "How to structure your Vue app from scratch",
-      blob: "Structuring a Front end app from scratch could be very a duanting task, making lots of decision get go...",
-    },
-  ];
+  const [articles] = useArticles();
 
   return (
     <div>
@@ -62,13 +47,13 @@ const Home = () => {
           <h3 className="text-5xl font-garamond">
             Check out some of my articles👇
           </h3>
-          {articles.map((article) => {
+          {articles.map((article, index) => {
             return (
               <ArticleCard
-                key={article.id}
+                key={index}
                 title={article.title}
                 id={article.id}
-                blob={article.blob}
+                blob={article.description}
               />
             );
           })}

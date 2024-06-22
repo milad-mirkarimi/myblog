@@ -1,22 +1,8 @@
 import ArticleCard from "../components/ArticleCard";
-import { useEffect, useState } from "react";
-import ArticleService from "../services/articleService";
+import useArticles from "../services/useArticles";
 
 const Articles = () => {
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    getArticles();
-  }, []);
-
-  async function getArticles() {
-    try {
-      const res = await ArticleService.fetchArticles();
-      setArticles(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const [articles] = useArticles();
 
   return (
     <div className="container p-8 mx-auto max-w-2xl h-screen">
