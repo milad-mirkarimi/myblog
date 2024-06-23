@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "application#fallback_index_html"
   scope 'api' do
     namespace 'v1' do
       post 'login' => 'auth#create'
@@ -8,4 +9,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get '*path', to: "application#fallback_index_html"
 end

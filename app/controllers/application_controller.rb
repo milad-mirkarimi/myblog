@@ -30,4 +30,8 @@ class ApplicationController < ActionController::API
       render json: { errors: "unauthorized" }, status: :unauthorized
     end
   end
+
+  def fallback_index_html
+    render file: Rails.root.join("public/index.html")
+  end
 end
