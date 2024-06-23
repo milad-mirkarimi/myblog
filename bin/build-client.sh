@@ -3,7 +3,7 @@
 set -xe
 
 cd app/client
-npm ci
+npm install
 npm run build
 
 cd ../..
