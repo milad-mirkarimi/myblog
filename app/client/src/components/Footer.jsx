@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-8">
+    <footer className="bg-gradient-to-r from-slate-900 to-slate-700 text-white p-8">
       <ul>
         <li className="pb-4 hover:underline hover:text-yellow-500">
           ✉️

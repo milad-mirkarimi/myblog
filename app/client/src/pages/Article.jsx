@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchArticle from "../services/fetchArticle";
 import { useParams } from "react-router-dom";
+import "../animations.css"
 
 const Article = () => {
   const { id } = useParams();
@@ -18,8 +19,8 @@ const Article = () => {
 
   return (
     <div className="h-full">
-      <section className="bg-gray-800 text-white p-8">
-        <h2 className="text-4xl md:text-5xl lg:text-8xl font-garamond">
+      <section className="background-gradient text-white p-8">
+        <h2 className="text-4xl md:text-5xl lg:text-8xl font-garamond main-title">
           {article.title}
         </h2>
         <p className="italic">By {article.user.fullname}</p>

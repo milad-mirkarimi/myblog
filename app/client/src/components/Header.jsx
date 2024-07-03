@@ -10,32 +10,32 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white p-8">
-      <h1 className="text-5xl font-garamond">👋 Milad Mirkarimi</h1>
+    <header className="background-gradient text-white p-8">
+      <h1 className="text-4xl font-garamond">Milad Mirkarimi</h1>
       <nav className="mt-4">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/" className="hover:underline hover:text-yellow-500">
+            <Link to="/" className="hover:underline">
               Home
             </Link>
           </li>
           <li>
             <Link
               to="/articles"
-              className="hover:underline hover:text-yellow-500"
+              className="hover:underline"
             >
               Articles
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:underline hover:text-yellow-500">
+            <Link to="/about" className="hover:underline">
               About
             </Link>
           </li>
           {isLoggedIn ? (
             <button
               onClick={handleLogout}
-              className="hover:underline hover:text-yellow-500"
+              className="hover:underline"
             >
               Logout
             </button>

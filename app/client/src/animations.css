@@ -1,0 +1,15 @@
+.main-title {
+  animation: slide-up 1.5s both;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: .2;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
