@@ -20,10 +20,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/articles"
-              className="hover:underline"
-            >
+            <Link to="/articles" className="hover:underline">
               Articles
             </Link>
           </li>
@@ -33,10 +30,7 @@ const Header = () => {
             </Link>
           </li>
           {isLoggedIn ? (
-            <button
-              onClick={handleLogout}
-              className="hover:underline"
-            >
+            <button onClick={handleLogout} className="hover:underline">
               Logout
             </button>
           ) : null}

@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function useCircleAnimation() {
   useEffect(() => {
-    const circleEl = document.querySelector('.circle');
+    const circleEl = document.querySelector(".circle");
     if (!circleEl) return;
 
     const currentPoint = { x: 0, y: 0 };
@@ -12,8 +12,8 @@ export default function useCircleAnimation() {
       currentPoint.x = currentPoint.x + (targetPoint.x - currentPoint.x) * 0.1;
       currentPoint.y = currentPoint.y + (targetPoint.y - currentPoint.y) * 0.1;
 
-      circleEl.style.setProperty('--x', currentPoint.x);
-      circleEl.style.setProperty('--y', currentPoint.y);
+      circleEl.style.setProperty("--x", currentPoint.x);
+      circleEl.style.setProperty("--y", currentPoint.y);
 
       requestAnimationFrame(lerp);
     }
@@ -25,10 +25,10 @@ export default function useCircleAnimation() {
       targetPoint.y = event.clientY;
     };
 
-    document.body.addEventListener('pointermove', handlePointerMove);
+    document.body.addEventListener("pointermove", handlePointerMove);
 
     return () => {
-      document.body.removeEventListener('pointermove', handlePointerMove);
+      document.body.removeEventListener("pointermove", handlePointerMove);
     };
   }, []);
-};
+}
