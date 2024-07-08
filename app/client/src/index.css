@@ -45,6 +45,6 @@ body {
 
 @layer utilities {
   .link {
-    @apply text-gray-200 text-base italic underline hover:text-blue-400;
+    @apply text-blue-600 text-base italic underline hover:text-blue-400;
   }
 }

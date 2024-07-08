@@ -1,5 +1,4 @@
-import bailee from "../assets/bailee.jpeg";
-import ludi from "../assets/bailee-and-ludi.jpeg";
+import bailee from "../assets/bailee-ludi.jpeg"
 
 const About = () => {
   return (
@@ -7,82 +6,28 @@ const About = () => {
       <h2 className="font-garamond text-5xl lg:text-8xl mb-8">
         About me
       </h2>
-
       <p className="mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        malesuada, ante ut dapibus aliquet, urna ipsum varius ligula, id finibus
-        lacus mauris convallis nisi. Mauris quis magna ac est malesuada
-        fermentum. Aenean consectetur a dui at vestibulum. Donec gravida ex
-        tellus, a varius ante sagittis vel. Sed tortor urna, hendrerit ac ornare
-        ut, varius sit amet purus. Aenean in sagittis elit. Cras felis eros,
-        blandit eu molestie et, pretium eget augue. Donec ut finibus risus, a
-        facilisis justo. Sed id eleifend eros. Donec risus est, suscipit vitae
-        tincidunt eget, maximus eget lacus. Pellentesque nec ullamcorper felis,
-        sed elementum lorem. Vivamus sit amet purus ut metus feugiat dapibus id
-        vitae nibh. Etiam metus massa, aliquet et porttitor at, fringilla at
-        leo. Mauris vel nibh rutrum, condimentum arcu vel, pretium lorem.
-        Vivamus odio nisi, mattis a volutpat vitae, porta at velit. Morbi
-        sagittis ex sit amet pellentesque tincidunt.
-      </p>
-
-      <img
-        src={bailee}
-        alt="Bailee"
-        className="w-full h-auto rounded shadow-lg"
-      />
-
-      <p className="mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        malesuada, ante ut dapibus aliquet, urna ipsum varius ligula, id finibus
-        lacus mauris convallis nisi. Mauris quis magna ac est malesuada
-        fermentum. Aenean consectetur a dui at vestibulum. Donec gravida ex
-        tellus, a varius ante sagittis vel. Sed tortor urna, hendrerit ac ornare
-        ut, varius sit amet purus. Aenean in sagittis elit. Cras felis eros,
-        blandit eu molestie et, pretium eget augue. Donec ut finibus risus, a
-        facilisis justo. Sed id eleifend eros. Donec risus est, suscipit vitae
-        tincidunt eget, maximus eget lacus. Pellentesque nec ullamcorper felis,
-        sed elementum lorem. Vivamus sit amet purus ut metus feugiat dapibus id
-        vitae nibh. Etiam metus massa, aliquet et porttitor at, fringilla at
-        leo. Mauris vel nibh rutrum, condimentum arcu vel, pretium lorem.
-        Vivamus odio nisi, mattis a volutpat vitae, porta at velit. Morbi
-        sagittis ex sit amet pellentesque tincidunt.
-      </p>
-
-      <img src={ludi} alt="Ludi" className="w-full h-auto rounded shadow-lg" />
-
-      <p className="mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        malesuada, ante ut dapibus aliquet, urna ipsum varius ligula, id finibus
-        lacus mauris convallis nisi. Mauris quis magna ac est malesuada
-        fermentum. Aenean consectetur a dui at vestibulum. Donec gravida ex
-        tellus, a varius ante sagittis vel. Sed tortor urna, hendrerit ac ornare
-        ut, varius sit amet purus. Aenean in sagittis elit. Cras felis eros,
-        blandit eu molestie et, pretium eget augue. Donec ut finibus risus, a
-        facilisis justo. Sed id eleifend eros. Donec risus est, suscipit vitae
-        tincidunt eget, maximus eget lacus. Pellentesque nec ullamcorper felis,
-        sed elementum lorem. Vivamus sit amet purus ut metus feugiat dapibus id
-        vitae nibh. Etiam metus massa, aliquet et porttitor at, fringilla at
-        leo. Mauris vel nibh rutrum, condimentum arcu vel, pretium lorem.
-        Vivamus odio nisi, mattis a volutpat vitae, porta at velit. Morbi
-        sagittis ex sit amet pellentesque tincidunt.
+        Hello there, I&apos;m Milad, a tech enthusiast and dog dad to two amazing dogs (arguably the best dogs in the world).
+        I currently live in Sydney and work remotely for APLYiD as a senior engineer. How did I end up in Sydney, you may ask? I can tell you more when I meet you.
       </p>
 
       <p className="mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        malesuada, ante ut dapibus aliquet, urna ipsum varius ligula, id finibus
-        lacus mauris convallis nisi. Mauris quis magna ac est malesuada
-        fermentum. Aenean consectetur a dui at vestibulum. Donec gravida ex
-        tellus, a varius ante sagittis vel. Sed tortor urna, hendrerit ac ornare
-        ut, varius sit amet purus. Aenean in sagittis elit. Cras felis eros,
-        blandit eu molestie et, pretium eget augue. Donec ut finibus risus, a
-        facilisis justo. Sed id eleifend eros. Donec risus est, suscipit vitae
-        tincidunt eget, maximus eget lacus. Pellentesque nec ullamcorper felis,
-        sed elementum lorem. Vivamus sit amet purus ut metus feugiat dapibus id
-        vitae nibh. Etiam metus massa, aliquet et porttitor at, fringilla at
-        leo. Mauris vel nibh rutrum, condimentum arcu vel, pretium lorem.
-        Vivamus odio nisi, mattis a volutpat vitae, porta at velit. Morbi
-        sagittis ex sit amet pellentesque tincidunt.
+        I have nearly 10 years of experience coding and building products using JavaScript frameworks such as React and Vue for the frontend, and Node.js for the backend.
+        Recently, I have discovered a passion for building products with Ruby on Rails.
       </p>
+
+      <p className="mb-8">
+        My experience in tech encompasses a wide range of roles, including Web Tutor, Frontend Engineer, Fullstack Engineer, Tech Lead, Software Engineering Manager, and most recently, Senior Software Engineer.
+      </p>
+
+      <p className="mb-8">
+        I cannot wait to discuss with you about your next ideas, opportunities or your team. You can contact me directly
+        using one of the links below:
+      </p>
+      <p className="link"><a rel="noreferrer" href="https://www.linkedin.com/in/milad-mirkarimi-74075398/" target="_blank">My Linked in profile</a></p>
+      <p className="link mb-8"><a href="mailto:miladmirkarimi3@gmail.com">miladmirkarimi3@gmail.com</a></p>
+
+      <img className="rounded-full" src={bailee} alt="Bailee-ludi" />
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Article = () => {
   return (
     <div className="h-full">
       <section className="background-gradient text-white p-8">
-        <h2 className="font-garamond text-5xl lg:text-8xl main-title">
+        <h2 className="font-garamond text-blue-600 text-5xl lg:text-8xl main-title">
           {article.title}
         </h2>
         <p className="italic">By {article.user.fullname}</p>
