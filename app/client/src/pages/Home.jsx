@@ -1,6 +1,5 @@
 import ArticleCard from "../components/ArticleCard";
 import useArticles from "../services/useArticles";
-import "../animations.css"
 
 const Home = () => {
   const [articles] = useArticles();
@@ -8,14 +7,14 @@ const Home = () => {
   return (
     <div>
       <section className="background-gradient text-white p-8">
-        <h2 className="text-4xl md:text-5xl lg:text-8xl font-garamond main-title">
+        <h2 className="text-4xl md:text-5xl lg:text-8xl font-garamond">
           Software solutions and ideas for purpose driven ambitious companies
         </h2>
       </section>
 
       <section className="p-8 grid md:grid-cols-2 gap-4">
         <div className="max-w-2xl">
-          <h3 className="text-5xl mb-8 font-garamond">Hey, my name is Milad</h3>
+          <h3 className="text-5xl mb-8 font-garamond">Hey, my name is <span className="text-blue-600">Milad</span></h3>
           <p className="mb-8">
             With extensive experience across frontend, backend
             and infrastructure stacks, working across some of New Zealand top
@@ -34,6 +33,7 @@ const Home = () => {
           {articles.map((article, index) => {
             return (
               <ArticleCard
+                style={{"--i": index}}
                 key={index}
                 title={article.title}
                 id={article.id}

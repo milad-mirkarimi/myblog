@@ -12,9 +12,10 @@ const Articles = () => {
       {!articles.length ? (
         <h3>Loading...</h3>
       ) : (
-        articles.map((article) => {
+        articles.map((article, index) => {
           return (
             <ArticleCard
+              style={{"--i": index}}
               key={article.id}
               title={article.title}
               id={article.id}

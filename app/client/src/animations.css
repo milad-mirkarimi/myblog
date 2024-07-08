@@ -1,8 +1,19 @@
 .main-title {
-  animation: slide-up 1.5s both;
+  animation: slide-up-and-show 1.5s both;
 }
 
-@keyframes slide-up {
+.article-card-gem {
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.article-card {
+  animation: slide-up 0.5s calc(var(--i) * 0.1s) both;
+}
+
+@keyframes slide-up-and-show {
   from {
     transform: translateY(20px);
     opacity: .2;
@@ -12,4 +23,15 @@
     transform: translateY(0);
     opacity: 1
   }
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50% { transform: translate(0, 25px); }
+  100% { transform: translate(0, -0px); }  
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10%) }
+  to { transform: none }
 }

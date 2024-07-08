@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchArticle from "../services/fetchArticle";
 import { useParams } from "react-router-dom";
-import "../animations.css"
 
 const Article = () => {
   const { id } = useParams();

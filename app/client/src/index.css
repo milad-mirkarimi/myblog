@@ -11,13 +11,17 @@ body {
   color: white;
 }
 
+.svg-container {
+  width: 120px;
+}
+
 @layer components {
   .search-input {
     @apply mb-4 block;
   }
 
   .background-gradient {
-    @apply bg-gradient-to-r from-blue-600 from-10% via-sky-800 via-30% to-emerald-500 to-90%;
+    @apply bg-zinc-900;
   }
 
   .button {

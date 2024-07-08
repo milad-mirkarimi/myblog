@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="background-gradient text-white p-8">
-      <h1 className="text-4xl font-garamond">Milad Mirkarimi</h1>
+      <h1 className="text-4xl font-garamond">theGrumpContainment</h1>
       <nav className="mt-4">
         <ul className="flex space-x-4">
           <li>
