@@ -31,7 +31,10 @@ const Home = () => {
           </h3>
           <p className="mb-8">
             I&apos;m faily a carious person, I build things and I break things,
-            I&apos;m always open to explore new ideas and experiences. I&apos;m
+            I&apos;m always open to explore new ideas and experiences.
+          </p>
+          <p className="mb-8">
+            I&apos;m
             a creative individual With extensive experience across frontend,
             backend and infrastructure stacks, working across some of New
             Zealand top startup companies. My passion is building maintainable
