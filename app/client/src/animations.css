@@ -13,6 +13,10 @@
   animation: slide-up 0.5s calc(var(--i) * 0.1s) both;
 }
 
+.catch {
+  animation: glow 5s calc(var(--delay) * 1s) both infinite;
+}
+
 @keyframes slide-up-and-show {
   from {
     transform: translateY(20px);
@@ -34,4 +38,10 @@
 @keyframes slide-up {
   from { transform: translateY(10%) }
   to { transform: none }
+}
+
+@keyframes glow {
+  0% { color: #2563eb; }
+  50% { color: white; }
+  100% { color: #2563eb; }
 }

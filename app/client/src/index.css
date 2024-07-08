@@ -15,6 +15,20 @@ body {
   width: 120px;
 }
 
+.circle {
+  height: 2vmin;
+  width: 2vmin;
+  border-radius: 2px;
+  @apply bg-blue-600;
+  position: absolute;
+  pointer-events: none;
+
+  transform: translate(
+    calc((var(--x) * 1px) - 50%),
+    calc((var(--y) * 1px) - 50%)
+  );
+}
+
 @layer components {
   .search-input {
     @apply mb-4 block;

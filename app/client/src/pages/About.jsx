@@ -4,7 +4,7 @@ import ludi from "../assets/bailee-and-ludi.jpeg";
 const About = () => {
   return (
     <div className="container p-8 mx-auto max-w-2xl">
-      <h2 className="font-garamond text-4xl md:text-5xl lg:text-8xl  mb-8">
+      <h2 className="font-garamond text-5xl lg:text-8xl mb-8">
         About me
       </h2>
 

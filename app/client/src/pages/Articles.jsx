@@ -1,12 +1,12 @@
 import ArticleCard from "../components/ArticleCard";
-import useArticles from "../services/useArticles";
+import useArticles from "../hooks/useArticles";
 
 const Articles = () => {
   const [articles] = useArticles();
 
   return (
     <div className="container p-8 mx-auto max-w-2xl h-screen">
-      <h2 className="font-garamond text-4xl md:text-5xl lg:text-8xl">
+      <h2 className="font-garamond text-5xl lg:text-8xl">
         Articles
       </h2>
       {!articles.length ? (

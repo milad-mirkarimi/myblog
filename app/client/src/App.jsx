@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import CreateArticle from "./pages/CreateArticle";
 import Article from "./pages/Article";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import useCircleAnimation from './hooks/useCircleAnimation';
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,8 +22,11 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  useCircleAnimation()
+
   return (
     <div className="App">
+      <div className="circle"></div>
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <Header></Header>
