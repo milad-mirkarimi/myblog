@@ -1,6 +1,6 @@
 import ArticleCard from "../components/ArticleCard";
 import useArticles from "../hooks/useArticles";
-import hello from "../assets/giphy.webp";
+// import hello from "../assets/giphy.webp";
 
 const Home = () => {
   const [articles] = useArticles();
@@ -40,7 +40,7 @@ const Home = () => {
             Zealand top startup companies. My passion is building maintainable
             and scalabe code and products that can live a long life.
           </p>
-          <img src={hello} alt="hello" />
+          {/* <img src={hello} alt="hello" /> */}
         </div>
 
         <div>
