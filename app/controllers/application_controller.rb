@@ -27,7 +27,7 @@ class ApplicationController < ActionController::API
     rescue JWT::DecodeError
       render json: { errors: "Token is fake" }, status: :unauthorized
     rescue StandardError
-      render json: { errors: "unauthorized" }, status: :unauthorized
+      render json: { errors: @current_user }, status: :unauthorized
     end
   end
 
