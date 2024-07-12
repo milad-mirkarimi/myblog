@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
   def authorize_request
     header = request.headers["Authorization"]
     if header.nil?
-      render json: { errors: "unauthorized" }, status: :unauthorized
+      render json: { errors: "Token does not exist" }, status: :unauthorized
       return
     end
 
@@ -23,9 +23,9 @@ class ApplicationController < ActionController::API
       decoded = jwt_decode(token)
       @current_user = User.find(decoded["user_id"])
     rescue ActiveRecord::RecordNotFound
-      render json: { errors: "unauthorized" }, status: :unauthorized
+      render json: { errors: "User does not exist" }, status: :unauthorized
     rescue JWT::DecodeError
-      render json: { errors: "unauthorized" }, status: :unauthorized
+      render json: { errors: "Token is fake" }, status: :unauthorized
     rescue StandardError
       render json: { errors: "unauthorized" }, status: :unauthorized
     end
