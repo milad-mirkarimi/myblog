@@ -31,7 +31,7 @@ body {
 
 @layer components {
   .search-input {
-    @apply mb-4 block;
+    @apply mb-4 block text-black;
   }
 
   .background-gradient {

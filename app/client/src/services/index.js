@@ -1,4 +1,5 @@
 import axios from "axios";
+import AuthService from "./authService";
 
 const http = axios.create({
   baseURL: `${
@@ -9,5 +10,18 @@ const http = axios.create({
     Accept: "application/json",
   },
 });
+
+http.interceptors.request.use(
+  (config) => {
+    const currentUser = AuthService.getCurrentUser();
+    if (currentUser) {
+      config.headers["Authorization"] = `Bearer ${currentUser.token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default http;

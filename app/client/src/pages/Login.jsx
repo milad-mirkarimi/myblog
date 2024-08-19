@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import AuthService from "../services/authService";
-import http from "../services/index";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
@@ -21,9 +20,6 @@ const Login = () => {
       const response = await AuthService.login(email, password);
       if (response.data.token) {
         sessionStorage.setItem("token", JSON.stringify(response.data));
-        http.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${response.data.token}`;
         setLoggedInUser(response.data.token);
         navigate("/create-article");
       } else {
