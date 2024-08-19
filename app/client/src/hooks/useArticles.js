@@ -11,7 +11,7 @@ export default function useArticles() {
     async function requestArticles() {
       setArticles([]);
       setStatus("loading");
-      const res = await ArticleService.fetchArticles();
+      const res = await ArticleService.getArticles();
 
       setArticles(res.data);
       setStatus("loaded");

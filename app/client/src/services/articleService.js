@@ -4,16 +4,16 @@ const create = (payload) => {
   return http.post("/articles", payload);
 };
 
-const fetchArticles = () => {
+const getArticles = () => {
   return http.get("/articles");
 };
 
-const fetchArticle = (id) => {
+const getArticle = (id) => {
   return http.get(`/articles/${id}`);
 };
 
 export default {
   create,
-  fetchArticles,
-  fetchArticle,
+  getArticles,
+  getArticle,
 };
