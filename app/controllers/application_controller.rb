@@ -26,8 +26,8 @@ class ApplicationController < ActionController::API
       render json: { errors: "User does not exist" }, status: :unauthorized
     rescue JWT::DecodeError
       render json: { errors: "Token is fake" }, status: :unauthorized
-    rescue StandardError
-      render json: { errors: @current_user }, status: :unauthorized
+    rescue StandardError => e
+      render json: { errors: e.message }, status: :unauthorized
     end
   end
 
