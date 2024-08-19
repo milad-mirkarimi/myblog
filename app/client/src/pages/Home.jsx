@@ -34,11 +34,11 @@ const Home = () => {
             I&apos;m always open to explore new ideas and experiences.
           </p>
           <p className="mb-8">
-            I&apos;m
-            a creative individual With extensive experience across frontend,
-            backend and infrastructure stacks, working across some of New
-            Zealand top startup companies. My passion is building maintainable
-            and scalabe code and products that can live a long life.
+            I&apos;m a creative individual With extensive experience across
+            frontend, backend and infrastructure stacks, working across some of
+            New Zealand top startup companies. My passion is building
+            maintainable and scalabe code and products that can live a long
+            life.
           </p>
           <img src={hello} alt="hello" />
         </div>
