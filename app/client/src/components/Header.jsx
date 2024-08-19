@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
 import AuthService from "../services/authService";
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
+import AuthContext from "../context/AuthContext";
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!AuthService.getCurrentUser());
+  const [loggedInUser, setLoggedInUser] = useContext(AuthContext);
   const handleLogout = () => {
     AuthService.logout();
-    setIsLoggedIn(false);
+    setLoggedInUser(null);
   };
+
+  useEffect(() => {
+    const currentUser = AuthService.getCurrentUser();
+    setLoggedInUser(currentUser);
+  }, []);
 
   return (
     <header className="background-gradient text-white p-8">
@@ -31,7 +37,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          {isLoggedIn ? (
+          {loggedInUser ? (
             <button onClick={handleLogout} className="hover:underline">
               Logout
             </button>

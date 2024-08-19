@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AuthService from "../services/authService";
 import http from "../services/index";
 import { useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [_, setLoggedInUser] = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -21,6 +24,7 @@ const Login = () => {
         http.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${response.data.token}`;
+        setLoggedInUser(response.data.token);
         navigate("/create-article");
       } else {
         setMessage("Invalid email or password");
