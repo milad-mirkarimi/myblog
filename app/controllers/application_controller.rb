@@ -5,9 +5,11 @@ class ApplicationController < ActionController::API
   end
 
   def jwt_decode(token)
-    body = JWT.decode(token, Rails.application.secrets.secret_key_base)[0]
-    HashWithIndifferentAccess.new body
-  rescue StandardError
+    decoded_token = JWT.decode(token, Rails.application.credentials.secret_key_base)[0]
+    logger.info "Decoded Token: #{decoded_token.inspect}"
+    decoded_token
+  rescue => e
+    logger.error "JWT Decode Error: #{e.message}"
     nil
   end
 
