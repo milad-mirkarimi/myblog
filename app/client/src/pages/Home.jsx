@@ -29,17 +29,17 @@ const Home = () => {
       <section className="background-gradient text-white p-8">
         <h2 className="text-5xl lg:text-8xl font-garamond">
           <span style={{ "--delay": 1 }} className="catch">
-            S
+            D
           </span>
-          oftware solutions and i
+            elivering scalable soft
           <span style={{ "--delay": 0.5 }} className="catch text-[--secondary]">
-            d
+            w
           </span>
-          eas for purpose driven a
+          are solutions make the w
           <span style={{ "--delay": 3 }} className="catch text-[--secondary]">
-            m
+            o
           </span>
-          bitious companies
+          rld a better place.
         </h2>
       </section>
 
