@@ -2,8 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #18181b;
+  --secondary: #2563eb;
+  --svg-fill: #2563eb;
+  --svg-stroke: #39B54A;
+}
+
+:root.joker {
+  --primary: #002411;
+  --secondary: #9333ea;
+  --svg-fill: #9333ea;
+  --svg-stroke: #39B54A;
+}
+
+:root.grinch {
+  --primary: #4c0519;
+  --secondary: #65a30d;
+  --svg-fill: #65a30d;
+  --svg-stroke: #39B54A;
+}
+
+:root.doubtfire {
+  --primary: #030712;
+  --secondary: #fbbf24;
+  --svg-fill: #fbbf24;
+  --svg-stroke: #39B54A;
+}
+
 body {
-  @apply bg-zinc-900;
+  background-color: var(--primary);
   font-size: 1.25rem;
   font-family: "Hind Vadodara", sans-serif;
   font-weight: 300;
@@ -15,11 +43,19 @@ body {
   width: 120px;
 }
 
+.svg-fill {
+  fill: var(--svg-fill)
+}
+
+.svg-stroke {
+  stroke: var(--svg-stroke);
+}
+
 .circle {
   height: 2vmin;
   width: 2vmin;
   border-radius: 2px;
-  @apply bg-blue-600;
+  background-color: var(--secondary);
   position: absolute;
   pointer-events: none;
 
@@ -35,16 +71,18 @@ body {
   }
 
   .background-gradient {
-    @apply bg-zinc-900;
+    background: var(--primary);
   }
 
   .button {
-    @apply bg-blue-600 text-sm hover:bg-blue-700 text-white py-2 px-4 rounded
+    background: var(--secondary);
+    @apply text-sm hover:bg-blue-700 text-white py-2 px-2 rounded
   }
 }
 
 @layer utilities {
   .link {
-    @apply text-blue-600 text-base italic underline hover:text-blue-400;
+    color: var(--secondary);
+    @apply text-base italic underline hover:text-blue-400;
   }
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AuthService from "../services/authService";
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
+import MoodButton from "./MoodButton";
 
 const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(AuthContext);
@@ -16,10 +17,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="background-gradient text-white p-8">
-      <h1 className="text-3xl md:text-4xl font-garamond">
-        theGrumpContainment
-      </h1>
+    <header className="background-gradient text-white p-8 relative">
+      <div className="flex">
+        <h1 className="text-3xl md:text-4xl font-garamond">
+          theGrumpContainment
+        </h1>
+        <MoodButton />
+      </div>
       <nav className="mt-4">
         <ul className="flex space-x-4">
           <li>

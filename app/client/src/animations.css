@@ -41,7 +41,7 @@
 }
 
 @keyframes glow {
-  0% { color: #2563eb; }
+  0% { color: var(--secondary); }
   50% { color: white; }
-  100% { color: #2563eb; }
+  100% { color: var(--secondary) }
 }

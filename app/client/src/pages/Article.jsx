@@ -32,10 +32,9 @@ const Article = () => {
               {section.title}
             </h3>
             <p className="mb-4">{section.text}</p>
-            {section.image ?
+            {section.image ? (
               <img src={section.image} alt={`section-${index}`} />
-              : null
-            }
+            ) : null}
           </section>
         ))}
       </div>

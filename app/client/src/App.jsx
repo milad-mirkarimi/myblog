@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-// import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Articles from "./pages/Articles";
@@ -11,6 +10,7 @@ import Article from "./pages/Article";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import useCircleAnimation from "./hooks/useCircleAnimation";
 import AuthContext from "./context/AuthContext";
+import MoodContext from "./context/MoodContext";
 import { useState } from "react";
 
 const queryClient = new QueryClient({
@@ -24,6 +24,7 @@ const queryClient = new QueryClient({
 
 function App() {
   const loggedInUser = useState(null);
+  const mood = useState("default");
   useCircleAnimation();
 
   return (
@@ -31,24 +32,26 @@ function App() {
       <div className="circle"></div>
       <BrowserRouter>
         <AuthContext.Provider value={loggedInUser}>
-          <QueryClientProvider client={queryClient}>
-            <Header></Header>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/articles" element={<Articles />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/articles/:id" element={<Article />} />
-              <Route
-                path="/create-article"
-                element={
-                  <ProtectedRoute>
-                    <CreateArticle />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
-          </QueryClientProvider>
+          <MoodContext.Provider value={mood}>
+            <QueryClientProvider client={queryClient}>
+              <Header></Header>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/articles" element={<Articles />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/articles/:id" element={<Article />} />
+                <Route
+                  path="/create-article"
+                  element={
+                    <ProtectedRoute>
+                      <CreateArticle />
+                    </ProtectedRoute>
+                  }
+                />
+              </Routes>
+            </QueryClientProvider>
+          </MoodContext.Provider>
         </AuthContext.Provider>
       </BrowserRouter>
     </div>

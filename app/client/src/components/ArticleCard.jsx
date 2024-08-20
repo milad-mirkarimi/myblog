@@ -22,44 +22,44 @@ const ArticleCard = ({ style, title, blob, id }) => {
             <polygon
               id="back"
               opacity="0.7"
-              fill="#2563eb"
+              className="svg-fill"
               points="125.2 130.3 41.6 141.9 41.6 52.3 125.3 40.2"
             />
             <polygon
               id="l-side"
               opacity="0.8"
-              fill="#2563eb"
+              className="svg-fill"
               points="87.5 166.7 41.6 142.5 41.6 52.3 88.5 77.3 "
             />
             <polygon
               id="r-side"
               opacity="0.8"
-              fill="#2563eb"
+              className="svg-fill"
               points="171.1 154.6 125.3 130.3 125.3 40.1 172.2 65.2 "
             />
             <polygon
               id="front"
               opacity="0.7"
-              fill="#2563eb"
+              className="svg-fill"
               points="171.1 155.2 87.5 166.7 88.5 77.3 172.1 65.6 "
             />
           </g>
           <g id="roof">
             <polygon
               opacity="0.7"
-              fill="#2563eb"
+              className="svg-fill"
               points="172.1 65.6 88.5 77.3 68.6 35.4 149.7 23.5 "
             />
             <polygon
               opacity="0.7"
-              fill="#2563eb"
+              className="svg-fill"
               points="125.3 40.2 41.6 52.3 68.1 35.4 149.8 23.7 "
             />
           </g>
           <g id="column">
             <line
               fill="none"
-              stroke="#39B54A"
+              className="svg-stroke"
               strokeMiterlimit="10"
               x1="87.5"
               y1="166.7"
@@ -68,7 +68,7 @@ const ArticleCard = ({ style, title, blob, id }) => {
             />
             <line
               fill="none"
-              stroke="#39B54A"
+              className="svg-stroke"
               strokeMiterlimit="10"
               x1="171.1"
               y1="155.2"
@@ -77,7 +77,7 @@ const ArticleCard = ({ style, title, blob, id }) => {
             />
             <line
               fill="none"
-              stroke="#39B54A"
+              className="svg-stroke"
               strokeMiterlimit="10"
               x1="125.3"
               y1="130.5"
@@ -86,7 +86,7 @@ const ArticleCard = ({ style, title, blob, id }) => {
             />
             <line
               fill="none"
-              stroke="#39B54A"
+              className="svg-stroke"
               strokeMiterlimit="10"
               x1="41.6"
               y1="142.5"
@@ -96,10 +96,9 @@ const ArticleCard = ({ style, title, blob, id }) => {
           </g>
           <g id="roof-lines">
             <line
-              className="one"
+              className="one svg-stroke"
               strokeLinecap="round"
               fill="none"
-              stroke="#39B54A"
               strokeMiterlimit="10"
               x1="88.5"
               y1="77.3"
@@ -107,10 +106,9 @@ const ArticleCard = ({ style, title, blob, id }) => {
               y2="35.4"
             />
             <line
-              className="two"
+              className="two svg-stroke"
               strokeLinecap="round"
               fill="none"
-              stroke="#39B54A"
               strokeMiterlimit="10"
               x1="41.6"
               y1="52.3"
@@ -118,10 +116,9 @@ const ArticleCard = ({ style, title, blob, id }) => {
               y2="35.4"
             />
             <line
-              className="three"
+              className="three svg-stroke"
               strokeLinecap="round"
               fill="none"
-              stroke="#39B54A"
               strokeMiterlimit="10"
               x1="172.2"
               y1="65.9"
@@ -129,10 +126,9 @@ const ArticleCard = ({ style, title, blob, id }) => {
               y2="23.7"
             />
             <line
-              className="four"
+              className="four svg-stroke"
               strokeLinecap="round"
               fill="none"
-              stroke="#39B54A"
               strokeMiterlimit="10"
               x1="125"
               y1="40.9"
@@ -140,9 +136,9 @@ const ArticleCard = ({ style, title, blob, id }) => {
               y2="23.7"
             />
             <line
+              className="svg-stroke"
               id="top"
               fill="none"
-              stroke="#39B54A"
               strokeMiterlimit="10"
               x1="68.1"
               y1="35.4"
