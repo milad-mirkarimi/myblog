@@ -5,24 +5,33 @@ import joker from "../assets/joker.webp";
 import grinch from "../assets/grinch.webp";
 import doubtfire from "../assets/doubtfire.webp";
 import MoodContext from "../context/MoodContext";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useMemo } from "react";
 
 const Home = () => {
   const [articles] = useArticles();
   const [mood] = useContext(MoodContext);
   const [imageToShow, setImageToShow] = useState(hello);
 
-  const images = {
+  const images = useMemo(() => ({
     joker: joker,
     grinch: grinch,
     doubtfire: doubtfire,
     default: hello,
-  };
-  
+  }), []);
+
+  // Preload images when the component mounts
   useEffect(() => {
-    setImageToShow(null)
+    Object.values(images).map((src) => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+  }, [images]);
+
+  // Set the image based on the current mood
+  useEffect(() => {
     setImageToShow(images[mood] || images.default);
-  }, [mood]);
+  }, [mood, images]);
 
   return (
     <div>
