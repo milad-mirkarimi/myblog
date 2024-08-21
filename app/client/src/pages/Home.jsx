@@ -5,7 +5,7 @@ import joker from "../assets/joker.webp";
 import grinch from "../assets/grinch.webp";
 import doubtfire from "../assets/doubtfire.webp";
 import MoodContext from "../context/MoodContext";
-import { useContext, useState, useEffect, useMemo } from "react";
+import { useContext, useState, useEffect } from "react";
 
 const Home = () => {
   const [articles] = useArticles();
@@ -18,14 +18,11 @@ const Home = () => {
     doubtfire: doubtfire,
     default: hello,
   };
-
-  const currentImage = useMemo(() => {
-    return images[mood] || images.default;
-  }, [mood]);
-
+  
   useEffect(() => {
-    setImageToShow(currentImage);
-  }, [currentImage]);
+    setImageToShow(null)
+    setImageToShow(images[mood] || images.default);
+  }, [mood]);
 
   return (
     <div>
