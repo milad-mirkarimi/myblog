@@ -8,7 +8,6 @@ import Login from "./pages/Login";
 import CreateArticle from "./pages/CreateArticle";
 import Article from "./pages/Article";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import useCircleAnimation from "./hooks/useCircleAnimation";
 import AuthContext from "./context/AuthContext";
 import MoodContext from "./context/MoodContext";
 import { useState } from "react";
@@ -25,7 +24,6 @@ const queryClient = new QueryClient({
 function App() {
   const loggedInUser = useState(null);
   const mood = useState("default");
-  useCircleAnimation();
 
   return (
     <div className="App">
