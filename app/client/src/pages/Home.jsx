@@ -19,7 +19,15 @@ const Home = () => {
     default: hello,
   }), []);
 
-  // Set the image based on the current mood
+  // Preload images when the component mounts
+  useEffect(() => {
+    Object.values(images).map((src) => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+  }, [images]);
+
   useEffect(() => {
     setImageToShow(images[mood] || images.default);
   }, [mood, images]);
