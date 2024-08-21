@@ -61,7 +61,7 @@ const Login = () => {
             className="search-input w-full rounded"
           />
         </label>
-        <button className="w-full rounded px-6 py-2 color text-white hover:opacity-90 border-none bg-blue-600">
+        <button className="w-full rounded px-6 py-2 color text-white hover:opacity-90 border-none bg-[--secondary]">
           {loading ? "Loading..." : "Submit"}
         </button>
       </form>

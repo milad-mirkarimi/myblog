@@ -5,24 +5,27 @@ import joker from "../assets/joker.webp";
 import grinch from "../assets/grinch.webp";
 import doubtfire from "../assets/doubtfire.webp";
 import MoodContext from "../context/MoodContext";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useMemo } from "react";
 
 const Home = () => {
   const [articles] = useArticles();
   const [mood] = useContext(MoodContext);
   const [imageToShow, setImageToShow] = useState(hello);
 
-  useEffect(() => {
-    if (mood == "joker") {
-      setImageToShow(joker);
-    } else if (mood == "grinch") {
-      setImageToShow(grinch);
-    } else if (mood == "doubtfire") {
-      setImageToShow(doubtfire);
-    } else {
-      setImageToShow(hello);
-    }
+  const images = {
+    joker: joker,
+    grinch: grinch,
+    doubtfire: doubtfire,
+    default: hello,
+  };
+
+  const currentImage = useMemo(() => {
+    return images[mood] || images.default;
   }, [mood]);
+
+  useEffect(() => {
+    setImageToShow(currentImage);
+  }, [currentImage]);
 
   return (
     <div>
@@ -31,7 +34,7 @@ const Home = () => {
           <span style={{ "--delay": 1 }} className="catch">
             D
           </span>
-            elivering scalable soft
+          elivering scalable soft
           <span style={{ "--delay": 0.5 }} className="catch text-[--secondary]">
             w
           </span>

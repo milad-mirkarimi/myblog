@@ -118,7 +118,7 @@ const CreateArticle = () => {
           </button>
         </div>
         <button
-          className="w-full rounded px-6 py-2 color text-white hover:opacity-90 border-none bg-blue-600"
+          className="w-full rounded px-6 py-2 color text-white hover:opacity-90 border-none bg-[--secondary]"
           type="submit"
         >
           Submit
