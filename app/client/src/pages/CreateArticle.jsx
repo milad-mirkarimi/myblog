@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ArticleService from "../services/articleService";
+import RichTextEditor from "../components/RichTextEditor";
 
 const CreateArticle = () => {
   const navigate = useNavigate();
@@ -15,6 +16,12 @@ const CreateArticle = () => {
     const { name, value } = event.target;
     const newSections = [...sections];
     newSections[index][name] = value;
+    setSections(newSections);
+  };
+
+  const handleEditorChange = (index, html) => {
+    const newSections = [...sections];
+    newSections[index].text = html;
     setSections(newSections);
   };
 
@@ -85,16 +92,11 @@ const CreateArticle = () => {
               </label>
               <label htmlFor={`text-${index}`}>
                 Text
-                <textarea
-                  rows="10"
-                  className="search-input w-full rounded"
-                  id={`text-${index}`}
-                  name="text"
-                  placeholder="Enter Section text"
-                  value={section.text}
-                  onChange={(event) => handleInputChange(index, event)}
-                />
               </label>
+              <RichTextEditor
+                value={section.text}
+                onChange={(html) => handleEditorChange(index, html)}
+              />
               <label htmlFor={`image-${index}`}>
                 Image
                 <input
