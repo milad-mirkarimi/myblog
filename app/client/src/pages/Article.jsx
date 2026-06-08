@@ -19,7 +19,7 @@ const Article = () => {
   return (
     <div className="h-full">
       <section className="background-gradient text-white p-8">
-        <h2 className="font-garamond text-5xl lg:text-8xl main-title text-[--secondary]">
+        <h2 className="font-garamond text-5xl lg:text-8xl main-title">
           {article.title}
         </h2>
         <p className="italic">By {article.user.fullname}</p>
@@ -31,7 +31,10 @@ const Article = () => {
             <h3 className="font-garamond text-4xl md:text-5xl mb-4">
               {section.title}
             </h3>
-            <p className="mb-4">{section.text}</p>
+            <div
+              className="mb-4 prose max-w-none"
+              dangerouslySetInnerHTML={{ __html: section.text }}
+            />
             {section.image ? (
               <img src={section.image} alt={`section-${index}`} />
             ) : null}

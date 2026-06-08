@@ -21,6 +21,10 @@ class ApplicationController < ActionController::API
     token = header.split(" ").last
     begin
       decoded = jwt_decode(token)
+      if decoded.nil?
+        render json: { errors: "Invalid or expired token" }, status: :unauthorized
+        return
+      end
       @current_user = User.find(decoded["user_id"])
     rescue ActiveRecord::RecordNotFound
       render json: { errors: "User does not exist" }, status: :unauthorized
