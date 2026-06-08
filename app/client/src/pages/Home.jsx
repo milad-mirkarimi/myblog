@@ -57,8 +57,7 @@ const Home = () => {
             Hey, my name is <span className="text-[--secondary]">Milad</span>
           </h3>
           <p className="mb-8">
-            I&apos;m fairly a curious person, I build things and I break things,
-            I&apos;m always open to explore new ideas and experiences.
+            I&apos;m fairly a curious person.
           </p>
           <img width="500" src={imageToShow} alt="hello" />
         </div>
